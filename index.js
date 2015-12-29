@@ -23,7 +23,7 @@ Adapter.prototype.start = function () {
   this.stopped = false
   this.emit('start')
 
-  fetchPage.call(this, 0)
+  fetchPage.call(this)
 }
 
 Adapter.prototype.stop = function () {
@@ -32,7 +32,7 @@ Adapter.prototype.stop = function () {
 
 module.exports = Adapter
 
-function fetchPage (pageNumber) {
+function fetchPage () {
   var url = 'https://api.imgur.com/3/gallery/'
     + this.section + '/'
     + this.sort + '/'
@@ -54,8 +54,12 @@ function fetchPage (pageNumber) {
 
         this.emit('gif', item.link, { origin: 'https://www.imgur.com/' + item.id })
       }, this)
+
+      this.currentPage++
+
+      if (this.currentPage < this.maxPages) fetchPage.call(this)
     } catch (e) {
-      console.error('could not fetch data from imgur: ' + e.message)
+      console.error('could not fetch data from imgur: ' + e.message, data)
     }
   }.bind(this))
 }
