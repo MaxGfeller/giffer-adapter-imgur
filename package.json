@@ -1,0 +1,32 @@
+{
+  "name": "giffer-adapter-imgur",
+  "version": "1.0.0",
+  "description": "Giffer adapter for imgur",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxGfeller/giffer-adapter-imgur.git"
+  },
+  "keywords": [
+    "giffer",
+    "gifs",
+    "gif",
+    "imgur"
+  ],
+  "author": "Max Gfeller <max.gfeller@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxGfeller/giffer-adapter-imgur/issues"
+  },
+  "homepage": "https://github.com/MaxGfeller/giffer-adapter-imgur#readme",
+  "dependencies": {
+    "inherits": "^2.0.1",
+    "request": "^2.67.0"
+  },
+  "devDependencies": {
+    "standard": "^5.4.1"
+  }
+}
