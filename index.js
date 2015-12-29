@@ -56,10 +56,10 @@ function fetchPage () {
       }, this)
 
       this.currentPage++
-
-      if (this.currentPage < this.maxPages) fetchPage.call(this)
     } catch (e) {
       console.error('could not fetch data from imgur: ' + e.message, data)
     }
+
+    if (this.currentPage < this.maxPages) fetchPage.call(this)
   }.bind(this))
 }
