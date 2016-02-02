@@ -27,6 +27,7 @@ Adapter.prototype.start = function () {
 }
 
 Adapter.prototype.stop = function () {
+  this.stopped = true
   this.emit('stop')
 }
 
