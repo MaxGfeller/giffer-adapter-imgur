@@ -1,6 +1,6 @@
 {
   "name": "giffer-adapter-imgur",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Giffer adapter for imgur",
   "main": "index.js",
   "scripts": {
